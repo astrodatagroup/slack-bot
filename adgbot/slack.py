@@ -8,8 +8,6 @@ from . import config
 
 
 def post_message(message):
-    secrets = config.get_slack_json()
-    r = requests.post(
-        secrets["webhook_url"], json=dict(text="[THIS IS A TEST]: " + message)
-    )
+    secrets = config.SLACK_JSON
+    r = requests.post(secrets["webhook_url"], json=dict(text=message))
     r.raise_for_status()

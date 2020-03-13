@@ -25,7 +25,7 @@ def get_filename():
 
 def get_creds():
     return service_account.Credentials.from_service_account_info(
-        config.get_google_json(), scopes=SCOPES
+        config.GOOGLE_JSON, scopes=SCOPES
     )
 
 

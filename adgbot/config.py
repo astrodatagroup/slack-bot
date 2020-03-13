@@ -13,18 +13,6 @@ import os
 import json
 
 
-PRESENTATION_TITLE = os.environ.get(
-    "PRESENTATION_TITLE", "Astro Data Group Meeting"
-)
-SHARED_DRIVE_NAME = os.environ.get(
-    "SHARED_DRIVE_NAME", "Astronomical Data Group"
-)
-TEMPLATE_NAME = os.environ.get("TEMPLATE_NAME", "__template__")
-SHARE_WITH_EMAIL = os.environ.get(
-    "SHARE_WITH_EMAIL", "astro-data-group@googlegroups.com"
-)
-
-
 def get_google_json():
     if "GOOGLE_INFO" in os.environ:
         return json.loads(os.environ["GOOGLE_INFO"])
@@ -37,3 +25,19 @@ def get_slack_json():
         return json.loads(os.environ["SLACK_INFO"])
     with open("secrets/slack.json", "r") as f:
         return json.load(f)
+
+
+GOOGLE_JSON = get_google_json()
+SLACK_JSON = get_slack_json()
+
+PRESENTATION_TITLE = os.environ.get(
+    "PRESENTATION_TITLE", "Astro Data Group Meeting"
+)
+SHARED_DRIVE_NAME = os.environ.get(
+    "SHARED_DRIVE_NAME", "Astronomical Data Group"
+)
+TEMPLATE_NAME = os.environ.get("TEMPLATE_NAME", "__template__")
+SHARE_WITH_EMAIL = os.environ.get(
+    "SHARE_WITH_EMAIL", "astro-data-group@googlegroups.com"
+)
+
