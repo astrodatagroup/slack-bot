@@ -29,6 +29,11 @@ def get_creds():
     )
 
 
+def get_email_service():
+    creds = get_creds()
+    return build("gmail", "v1", credentials=creds)
+
+
 def get_drive_service():
     return build("drive", "v3", credentials=get_creds())
 
