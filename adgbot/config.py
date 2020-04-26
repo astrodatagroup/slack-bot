@@ -57,4 +57,6 @@ TEMPLATE_NAME = os.environ.get("TEMPLATE_NAME", "__template__")
 SHARE_WITH_EMAIL = os.environ.get(
     "SHARE_WITH_EMAIL", "astro-data-group@googlegroups.com"
 )
-SEND_TO_EMAIL = os.environ.get("SEND_TO_EMAIL", "foreman.mackey@gmail.com")
+SEND_TO_EMAIL = os.environ.get(
+    "SEND_TO_EMAIL", "astro-data-group@googlegroups.com"
+)
