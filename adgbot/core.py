@@ -6,6 +6,8 @@ from . import google, slack, mail, config
 def main(*args, **kwargs) -> None:
     new_file = google.create_new_deck()
     message = """
+THIS IS A TEST - IGNORE ME!
+
 Hello! I created a new slide deck for this week's group meeting.
 
 Add your slide here: {0}
