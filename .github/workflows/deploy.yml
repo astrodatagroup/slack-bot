@@ -20,7 +20,7 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
-          function_name: create-new-deck
+          function_name: test
           source: ./router.py
       - name: Deploy worker
         uses: appleboy/lambda-action@v0.0.4
@@ -28,6 +28,6 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
-          function_name: actually-create-new-deck
+          function_name: test2
           zip_file: ./build.zip
           dry_run: true
