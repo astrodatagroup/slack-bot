@@ -3,5 +3,6 @@ environment.lock
 environment.yml
 deps
 build
-build*
+build/*
 *.zip
+*.tar.gz

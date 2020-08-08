@@ -37,10 +37,22 @@ def get_mailgun_json():
 
 
 def get_email_template():
-    if "EMAIL_TEMPLATE" in os.environ:
-        return json.loads(os.environ["EMAIL_TEMPLATE"])
-    with open("secrets/email.txt", "r") as f:
-        return f.read()
+    return """
+Hi all,
+
+We will have group meeting at 12:30 today. Don't forget to add a slide to the deck:
+
+{slide_deck_url}
+
+Join via Zoom:
+
+{zoom_link}
+
+Best,
+A Robot
+""".strip().replace(  # noqa
+        "{zoom_link}", ZOOM_LINK
+    )
 
 
 GOOGLE_JSON = get_google_json()
@@ -60,3 +72,4 @@ SHARE_WITH_EMAIL = os.environ.get(
 SEND_TO_EMAIL = os.environ.get(
     "SEND_TO_EMAIL", "astro-data-group@googlegroups.com"
 )
+ZOOM_LINK = os.environ.get("ZOOM_LINK", None)
