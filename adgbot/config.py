@@ -44,15 +44,9 @@ We will have group meeting at 12:30 today. Don't forget to add a slide to the de
 
 {slide_deck_url}
 
-Join via Zoom:
-
-{zoom_link}
-
 Best,
 A Robot
-""".strip().replace(  # noqa
-        "{zoom_link}", ZOOM_LINK
-    )
+""".strip()
 
 
 GOOGLE_JSON = get_google_json()

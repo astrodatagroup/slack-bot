@@ -9,10 +9,8 @@ def main(*args, **kwargs) -> None:
 Hello! I created a new slide deck for this week's group meeting.
 
 Add your slide here: {0}
-
-Join the meeting via Zoom: {1}
 """.strip().format(
-        new_file["webViewLink"], config.ZOOM_LINK
+        new_file["webViewLink"]
     )
     slack.post_message(message)
     mail.send_message(new_file["webViewLink"])

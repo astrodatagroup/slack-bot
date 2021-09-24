@@ -17,7 +17,7 @@ def lambda_handler(event, context):
         "body": """
 {
   "response_type": "ephemeral",
-  "text": "I'm making you a new deck!"
+  "text": "I'm working on making you a new deck!"
 }
         """,
         "headers": {"Content-Type": "application/json"},
