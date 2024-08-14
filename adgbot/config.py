@@ -40,7 +40,7 @@ def get_email_template():
     return """
 Hi all,
 
-We will have group meeting at noon today. Don't forget to add a slide to the deck:
+We will have group meeting at 11am today in the 5th floor classroom. Don't forget to add a slide to the deck:
 
 {slide_deck_url}
 
